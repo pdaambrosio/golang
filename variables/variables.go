@@ -19,6 +19,7 @@ var (
 
 
 func main() {
+	test := "test" //suggar sintax
 	fmt.Printf("addres: %s\r\n", address)
 	fmt.Printf("phone: %s\r\n", phone)
 	fmt.Printf("name: %s\r\n", name)
@@ -29,6 +30,7 @@ func main() {
 	fmt.Printf("words: %c\r\n", words)
 	fmt.Printf("information: %s\r\n", information)
 	fmt.Printf("age: %d\r\n", age)
-	fmt.Printf("addres2: %s\r\n", addres2)
+	fmt.Printf("addres2: %s\r\n", Addres2)
 	fmt.Printf("phone2: %s\r\n", phone2)
+	fmt.Printf("test: %s\r\n", test)
 }
