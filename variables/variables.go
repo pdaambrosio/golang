@@ -13,9 +13,10 @@ var words rune
 var (
 	information     string
 	age             int
-	addres2, phone2 string
+	Addres2, phone2 string //Address2 is public, phone2 is private
 	password        string = "123456"
 )
+
 
 func main() {
 	fmt.Printf("addres: %s\r\n", address)
