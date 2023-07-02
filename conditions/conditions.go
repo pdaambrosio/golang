@@ -51,6 +51,18 @@ func writeFile(filename string, data string) {
 	file.WriteString(data)
 }
 
+func isGreaterSwitch(a, b int) string {
+	// Switch statement
+	switch {
+	case a > b:
+		return "a is greater than b"
+	case a < b:
+		return "a is less than b"
+	default:
+		return "a is equal to b"
+	}
+}
+
 
 func main() {
 	fmt.Println(isGreater(1, 2))
@@ -58,4 +70,5 @@ func main() {
 	fmt.Println(isGreater(2, 2))
 	fmt.Println(readFile("hello.txt"))
 	writeFile("hello2.txt", "Hello, World2!")
+	fmt.Println(isGreaterSwitch(1, 2))
 }
