@@ -18,6 +18,7 @@ func isGreater(a, b int) string {
 
 
 func readFile(filename string) string {
+	// Open file for reading
 	file, err := os.Open(filename)
 	if err != nil {
 		log.Fatal(err)
@@ -25,13 +26,18 @@ func readFile(filename string) string {
 
 	defer file.Close()
 
+	// Read file, 100 bytes at a time
 	data := make([]byte, 100)
+	// Read up to 100 bytes
 	if _, err := file.Read(data); err != nil {
 		log.Fatal(err)
 	}
 
+	// Convert bytes to string
 	return string(data)
 }
+
+
 
 
 func main() {
