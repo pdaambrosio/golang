@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	// "os"
-	// "log"
+	"os"
+	"log"
 )
 
 func isGreater(a, b int) string {
@@ -16,8 +16,27 @@ func isGreater(a, b int) string {
 	}
 }
 
+
+func readFile(filename string) string {
+	file, err := os.Open(filename)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	defer file.Close()
+
+	data := make([]byte, 100)
+	if _, err := file.Read(data); err != nil {
+		log.Fatal(err)
+	}
+
+	return string(data)
+}
+
+
 func main() {
 	fmt.Println(isGreater(1, 2))
 	fmt.Println(isGreater(2, 1))
 	fmt.Println(isGreater(2, 2))
+	fmt.Println(readFile("hello.txt"))
 }
