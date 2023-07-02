@@ -7,6 +7,7 @@ import (
 )
 
 func isGreater(a, b int) string {
+	// If-else statement
 	if a > b {
 		return "a is greater than b"
 	} else if a < b {
@@ -37,7 +38,18 @@ func readFile(filename string) string {
 	return string(data)
 }
 
+func writeFile(filename string, data string) {
+	// Open file for writing
+	file, err := os.Create(filename)
+	if err != nil {
+		log.Fatal(err)
+	}
 
+	defer file.Close()
+
+	// Write string to file
+	file.WriteString(data)
+}
 
 
 func main() {
@@ -45,4 +57,5 @@ func main() {
 	fmt.Println(isGreater(2, 1))
 	fmt.Println(isGreater(2, 2))
 	fmt.Println(readFile("hello.txt"))
+	writeFile("hello2.txt", "Hello, World2!")
 }
