@@ -4,7 +4,8 @@ import "fmt"
 
 func learningSlice() {
 	// Array are fixed length
-	names := []string{"John", "Wick", "Ethan", "Hunt", "Jason", "Bourne", "James", "Bond"} // length 8, capacity 8
+	// Array are comparable if the type of the array is comparable
+	names := [8]string{"John", "Wick", "Ethan", "Hunt", "Jason", "Bourne", "James", "Bond"} // length 8, capacity 8
 
 	// Print the array
 	fmt.Println(names, len(names), cap(names))
@@ -24,7 +25,9 @@ func learningSlice() {
 }
 
 func newSliceLengthCapacity() {
-	// Array declaration
+	// Slice declaration
+	// Slice are dynamic length
+	// Slice aren't comparable
 	names := make([]string, 5, 10) // length 5, capacity 10
 	fmt.Println(names, len(names), cap(names))
 	fmt.Println()
