@@ -5,7 +5,7 @@ import "fmt"
 func learningSlice() {
 	// Array are fixed length
 	// Array are comparable if the type of the array is comparable
-	names := [8]string{"John", "Wick", "Ethan", "Hunt", "Jason", "Bourne", "James", "Bond"} // length 8, capacity 8
+	names := []string{"John", "Wick", "Ethan", "Hunt", "Jason", "Bourne", "James", "Bond"} // length 8, capacity 8
 
 	// Print the array
 	fmt.Println(names, len(names), cap(names))
