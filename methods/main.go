@@ -32,6 +32,14 @@ func (p People) show() {
 	Age, p.Status, p.documentID) // Print the struct fields
 }
 
+// This method is a value receiver
+// It cannot modify the value to which the receiver points
+func (p People) string() string {
+	return fmt.Sprintf("%s %s: %d years old", p.Name, p.LastName, p.Age) // Return the string
+}
+
+// This method is a pointer receiver
+// It can modify the value to which the receiver points
 func (p *People) birthday() {
 	p.Age++ // Increment the age
 }
@@ -82,6 +90,9 @@ func main() {
 	p1.show()
 	p2.show()
 	p3.show()
+
+	// Print the structs using the string method
+	fmt.Println(p1.string())
 
 	// Struct declaration with initialization
 	cat1 := Category {
