@@ -12,8 +12,10 @@ or
 
 ```bash
 brew install golang
+```
 
-# Add to ~/.bash_profile
+## Add to ~/.bash_profile
+
 ```bash
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -25,7 +27,7 @@ It is recommended to create a directory for your Go projects, and set GOPATH to 
 
 ## Hello World
 
-```bash 
+```bash
 mkdir hello
 cd hello
 touch hello.go
