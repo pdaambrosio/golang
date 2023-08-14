@@ -4,6 +4,7 @@ use (
 	./conditions
 	./hello
 	./heritage
+	./interfaces
 	./looping
 	./mapSliceStruct
 	./methods
