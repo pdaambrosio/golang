@@ -2,11 +2,20 @@ package main
 
 import "fmt"
 
+type Vehicle interface {
+	accelerate()
+}
+
 // Struct is a way to create a custom data type
 type Car struct {
 	manufacturer string
 	model string
 	year int
+}
+
+// This is a interface method implementation for Car struct
+func (c Car) accelerate() {
+	fmt.Println("The", c.manufacturer, c.model, "is accelerating")
 }
 
 // Struct is a way to create a custom data type
@@ -16,11 +25,18 @@ type Motorcycle struct {
 	year int
 }
 
+// This is a interface method implementation for Motorcycle struct
+func (m Motorcycle) accelerate() {
+	fmt.Println("The", m.manufacturer, m.model, "is accelerating")
+}
+
 // Struct can be used as a field in another struct (composition)
 type People struct {
 	name string
 	age int
 	Car Car
+	Motorcycle Motorcycle
+	Venicle Vehicle
 }
 
 // This is a simple function that receives a struct as parameter
@@ -49,14 +65,44 @@ func main() {
 		year: 2020,
 	}
 
+	var yamaha Motorcycle = Motorcycle{
+		manufacturer: "Yamaha",
+		model: "XJ6",
+		year: 2019,
+	}
+
 	var john People = People{
 		name: "John",
 		age: 20,
 		Car: bmw,
 	}
 
-	fmt.Println(john)
-	goToWork(john)
-	john.goToWorkAgain()
-	goToHome(&john)
+	var stalone People = People{
+		name: "Stalone",
+		age: 50,
+		Motorcycle: yamaha,
+	}
+
+	var link People = People{
+		name: "Link",
+		age: 30,
+		Venicle: yamaha,
+	}
+
+	var zelda People = People{
+		name: "Zelda",
+		age: 30,
+		Venicle: bmw,
+	}
+
+	fmt.Println(john) // print the struct
+	goToWork(john)  // call the simple function
+	john.goToWorkAgain() // call the method
+	goToHome(&john) // call the function that receives a pointer to a struct
+	fmt.Println(stalone) // print the struct again
+	stalone.goToWorkAgain() // call the method again but with another struct without car (missing fields)
+	fmt.Println(link) // print the struct again
+	link.Venicle.accelerate() // call the method again but with another struct
+	fmt.Println(zelda) // print the struct again
+	zelda.Venicle.accelerate() // call the method again but with another struct
 }
