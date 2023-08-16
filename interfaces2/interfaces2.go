@@ -9,6 +9,13 @@ type Car struct {
 	year int
 }
 
+// Struct is a way to create a custom data type
+type Motorcycle struct {
+	manufacturer string
+	model string
+	year int
+}
+
 // Struct can be used as a field in another struct (composition)
 type People struct {
 	name string
