@@ -6,6 +6,7 @@ use (
 	./hello
 	./heritage
 	./interfaces
+	./interfaces2
 	./looping
 	./mapSliceStruct
 	./methods
