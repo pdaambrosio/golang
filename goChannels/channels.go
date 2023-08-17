@@ -5,13 +5,14 @@ import (
 	"time"
 )
 
+// A channel is a communication mechanism that allows one goroutine to pass values of a specified type to another goroutine.
 func say(s string, done chan string) {
 	for i := 0; i < 3; i++ {
 		time.Sleep(100 * time.Millisecond) // Sleep for 100 milliseconds
 		fmt.Println(s) // Print the string
 	}
 
-	done <- "done"
+	done <- "done" // Send a value to notify that the goroutine has finished
 }
 
 func main() {
