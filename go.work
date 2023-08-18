@@ -5,6 +5,7 @@ use (
 	./conditions
 	./goChannels
 	./goroutine
+	./goroutine2
 	./hello
 	./heritage
 	./interfaces
