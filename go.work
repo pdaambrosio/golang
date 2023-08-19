@@ -4,6 +4,7 @@ use (
 	./assertInterfaces
 	./conditions
 	./goChannels
+	./goChannels2
 	./goroutine
 	./goroutine2
 	./hello
