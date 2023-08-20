@@ -1,6 +1,6 @@
 # golang
 
-Learning Go
+Trying to learn Go. This is a collection of notes and code snippets. (It's looks like a mix of C and Python :weary:)
 
 ## Installation
 
