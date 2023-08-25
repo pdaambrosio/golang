@@ -16,4 +16,5 @@ use (
 	./looping
 	./mapSliceStruct
 	./methods
+	./pointers
 )
