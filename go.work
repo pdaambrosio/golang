@@ -16,6 +16,7 @@ use (
 	./interfaces2
 	./looping
 	./mapSliceStruct
+	./maps
 	./methods
 	./pointers
 	./slices
