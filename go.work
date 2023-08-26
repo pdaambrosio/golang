@@ -18,4 +18,5 @@ use (
 	./mapSliceStruct
 	./methods
 	./pointers
+	./slices
 )
