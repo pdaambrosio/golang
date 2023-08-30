@@ -48,8 +48,11 @@ func loopSliceWithoutIndex(dataArr []string) {
 
 func infiniteLoop() {
 	// for {}, go don't have while loop
+	var i int
 	for {
 		fmt.Println("infinite loop")
+		fmt.Println(i)
+		i++
 	}
 }
 
