@@ -63,4 +63,8 @@ func main() {
 	loopSliceIndex(data)
 	loopSliceWithoutIndex(data)
 	// infiniteLoop()
+	wellKnownPorts := map[string]int{"http": 80, "https": 443}
+	for key, value := range wellKnownPorts {
+		fmt.Println(key, value)
+	}
 }
