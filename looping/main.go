@@ -70,4 +70,8 @@ func main() {
 	for key, value := range wellKnownPorts {
 		fmt.Println(key, value)
 	}
+
+	for _, value := range wellKnownPorts {
+		fmt.Println(value)
+	}
 }
