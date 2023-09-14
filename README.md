@@ -2,6 +2,8 @@
 
 Trying to learn Go. This is a collection of notes and code snippets. (It's looks like a mix of C and Python :weary:)
 
+This is a work in progress. :construction:
+
 ## Installation
 
 ```bash
@@ -52,3 +54,4 @@ go run hello.go
 - [Go Website](https://golang.org/)
 - [Go Documentation](https://golang.org/doc/)
 - [Go Packages](https://golang.org/pkg/)
+- [Go Packages Builtin](https://pkg.go.dev/builtin)
