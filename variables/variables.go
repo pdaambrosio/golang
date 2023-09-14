@@ -126,6 +126,9 @@ var strC9 = string([]rune{116, 101, 115, 116})
 // string to rune
 var runeC10 = []rune("test")
 
+var string1 = "this is a string" // This is a interpreted string (string interpolation) and can be used with \n, \t, etc
+var string2 = `this is a string` // This is a raw string and if you use \n, \t, etc, this escape characters will be interpreted as commum text
+
 func main() {
 	test := "test" //suggar sintax
 	fmt.Printf("addres: %s\r\n", address)
