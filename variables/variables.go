@@ -131,13 +131,12 @@ var string2 = `this is a string` // This is a raw string and if you use \n, \t, 
 
 // type conversions
 
-var i int = 32
-var f float32
-// f = i // error, go don't allow implicit type conversions
-f = float32(i) // ok, this is a explicit type conversion
+var d float64 = 3.1415
+// var e int = d // error, go don't allow implicit type conversions
+var e int = int(d) // ok, this is a explicit type conversion
 
 func main() {
-	test := "test" //suggar sintax
+	test := "test" // suggar sintax
 	fmt.Printf("addres: %s\r\n", address)
 	fmt.Printf("phone: %s\r\n", phone)
 	fmt.Printf("name: %s\r\n", name)
@@ -151,6 +150,6 @@ func main() {
 	fmt.Printf("addres2: %s\r\n", Addres2)
 	fmt.Printf("phone2: %s\r\n", phone2)
 	fmt.Printf("test: %s\r\n", test)
-	fmt.Printf("Int convert: %d", intC1)
-	fmt.Printf("Float convert: %f", f)
+	fmt.Printf("Int convert: %d\r\n", intC1)
+	fmt.Printf("Float convert: %d\r\n", e)
 }
