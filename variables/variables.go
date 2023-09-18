@@ -129,6 +129,13 @@ var runeC10 = []rune("test")
 var string1 = "this is a string" // This is a interpreted string (string interpolation) and can be used with \n, \t, etc
 var string2 = `this is a string` // This is a raw string and if you use \n, \t, etc, this escape characters will be interpreted as commum text
 
+// type conversions
+
+var i int = 32
+var f float32
+// f = i // error, go don't allow implicit type conversions
+f = float32(i) // ok, this is a explicit type conversion
+
 func main() {
 	test := "test" //suggar sintax
 	fmt.Printf("addres: %s\r\n", address)
@@ -145,4 +152,5 @@ func main() {
 	fmt.Printf("phone2: %s\r\n", phone2)
 	fmt.Printf("test: %s\r\n", test)
 	fmt.Printf("Int convert: %d", intC1)
+	fmt.Printf("Float convert: %f", f)
 }
