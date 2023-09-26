@@ -57,6 +57,17 @@ const (
 // KB, MB, GB, TB, PB, EB, ZB, YB
 type ByteSize float64
 
+// The code block `const (
+//     _           = iota // ignore first value by assigning to blank identifier
+//     KB ByteSize = 1 << (10 * iota)
+//     MB
+//     GB
+//     TB
+//     PB
+//     EB
+//     ZB
+//     YB
+// )` is defining a set of constants representing different byte sizes.
 const (
     _           = iota // ignore first value by assigning to blank identifier
     KB ByteSize = 1 << (10 * iota)
@@ -69,6 +80,8 @@ const (
     YB
 )
 
+// The `func (b ByteSize) String() string` is a method defined on the `ByteSize` type. It allows you to
+// define how the `ByteSize` type should be formatted when converted to a string.
 func (b ByteSize) String() string {
     switch {
     case b >= YB:
@@ -91,6 +104,8 @@ func (b ByteSize) String() string {
     return fmt.Sprintf("%.2fB", b)
 }
 
+// The main function prints out various variables and constants, including numbers, strings, and byte
+// sizes.
 func main() {
 	fmt.Println(num1)
 	fmt.Println(num2)
