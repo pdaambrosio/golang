@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"golang.org/x/exp/slices"
+)
 
 /*
 Slices are like arrays, but their size is dynamic.
@@ -21,4 +24,14 @@ func main() {
 
 	s3 := slice[1:2] // slice from index 1 to index 2
 	fmt.Println(s3)
+
+	slice = append(slice, 4, 5, 6) // append 4 to the end of the slice
+	fmt.Println(slice)
+
+	slices.Delete(slice, 0, 1) // delete the element at index 2
+	fmt.Println(slice)
+
+	slice2 := []int{1, 2, 3, 4}
+	slice2 = slices.Delete(slice, 1, 2)
+	fmt.Println(slice2) // [1 3 4]
 }

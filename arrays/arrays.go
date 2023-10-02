@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 /*
-Arrays are fixed size, and cannot be resized.
-Arrays are zero indexed.
-Arrays must be of the same type.
+Arrays are fixed size, and cannot be resized
+Arrays are zero indexed
+Arrays must be of the same type of value
 */
 
 func main() {
