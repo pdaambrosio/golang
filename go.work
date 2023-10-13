@@ -15,6 +15,7 @@ use (
 	./heritage
 	./interfaces
 	./interfaces2
+	./interfaces3
 	./looping
 	./mapSliceStruct
 	./maps
