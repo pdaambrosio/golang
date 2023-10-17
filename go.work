@@ -7,6 +7,7 @@ use (
 	./bufferChannels2
 	./conditions
 	./constants
+	./genericFunctionCustomType
 	./genericFunctions
 	./goChannels
 	./goChannels2
