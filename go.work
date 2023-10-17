@@ -1,4 +1,4 @@
-go 1.21.1
+go 1.21.2
 
 use (
 	./arrays
@@ -7,6 +7,7 @@ use (
 	./bufferChannels2
 	./conditions
 	./constants
+	./genericFunctions
 	./goChannels
 	./goChannels2
 	./goroutine
