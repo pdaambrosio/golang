@@ -36,7 +36,7 @@ func sumGeneric[T int | float64](m map[string]T) T {
 
 // Another way to write the function sumGeneric
 
-// Define an interface Number that can be either an int, int64, float32 or float64
+// Define an interface Number that can be either an int, int64, float32 or float64 (constraints)
 type Number interface {
 	~int | ~int64 | ~float32 | ~float64 // We need add "~" before the type to indicate that it is an interface type and not a concrete type, with this we can use type Number2 in the function sumGeneric2
 }
