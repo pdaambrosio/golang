@@ -9,6 +9,7 @@ use (
 	./constants
 	./genericFunctionCustomType
 	./genericFunctions
+	./genericFunctions2
 	./goChannels
 	./goChannels2
 	./goroutine
