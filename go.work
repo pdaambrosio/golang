@@ -12,6 +12,7 @@ use (
 	./genericFunctions2
 	./goChannels
 	./goChannels2
+	./goChannels3
 	./goroutine
 	./goroutine2
 	./hello
