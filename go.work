@@ -21,6 +21,7 @@ use (
 	./interfaces2
 	./interfaces3
 	./looping
+	./loopingChannels
 	./mapSliceStruct
 	./maps
 	./methods
