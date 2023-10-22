@@ -26,6 +26,7 @@ use (
 	./methods
 	./panicAndRecover
 	./pointers
+	./selectStatements
 	./slices
 	./variables
 	./waitGroups
