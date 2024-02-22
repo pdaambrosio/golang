@@ -1,4 +1,4 @@
-go 1.21.3
+go 1.21.5
 
 use (
 	./arrays
@@ -27,6 +27,7 @@ use (
 	./methods
 	./panicAndRecover
 	./pointers
+	./scraping
 	./selectStatements
 	./slices
 	./test
